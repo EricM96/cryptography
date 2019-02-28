@@ -17,9 +17,15 @@ std::string CaesarCrypt::encrypt(std::string plaintext) {
 std::string CaesarCrypt::decrypt(std::string ciphertext) {
     for(size_t i{0}; i < ciphertext.size(); ++i) {
         if (std::isupper(ciphertext.at(i))) {
-        ciphertext[i] = char((int(ciphertext.at(i)) - key - 65)%26 + 65);
+            int new_char = int(ciphertext.at(i)) - key - 65;
+            if (new_char < 0) new_char = new_char + 26; // the number passed to modulo must be postive 
+            new_char = new_char% 26 + 65;
+            ciphertext[i] = char(new_char);
         } else if (std::islower(ciphertext.at(i)))  {
-            ciphertext[i] = char(int(ciphertext.at(i) - key - 97)%26 + 97);
+            int new_char = int(ciphertext.at(i)) - key - 97;
+            if (new_char < 0) new_char = new_char + 26; 
+            new_char = new_char% 26 + 97;
+            ciphertext[i] = char(new_char);
         }
     } 
     return ciphertext; 
