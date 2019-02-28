@@ -5,18 +5,22 @@ CaesarCrypt::CaesarCrypt(int u_key) : key(u_key) {};
 
 std::string CaesarCrypt::encrypt(std::string plaintext) {
     for(size_t i{0}; i < plaintext.size(); ++i) {
-        std::vector<char>::iterator it = std::find(alphabet.begin(), alphabet.end(), plaintext.at(i)); 
-        size_t index = std::distance(alphabet.begin(), it); 
-        plaintext[i] = alphabet[(index + key) % 25 - 1]; 
+        if (std::isupper(plaintext.at(i))) {
+            plaintext[i] = char((int(plaintext.at(i)) + key - 65)%26 + 65);
+        } else if (std::islower(plaintext.at(i)))  {
+            plaintext[i] = char((int(plaintext.at(i)) + key - 97)%26 + 97);
+        }
     } 
     return plaintext; 
 }
 
 std::string CaesarCrypt::decrypt(std::string ciphertext) {
     for(size_t i{0}; i < ciphertext.size(); ++i) {
-        std::vector<char>::iterator it = std::find(alphabet.begin(), alphabet.end(), ciphertext.at(i)); 
-        size_t index = std::distance(alphabet.begin(), it); 
-        ciphertext[i] = alphabet[(index - key) % 26]; 
+        if (std::isupper(ciphertext.at(i))) {
+        ciphertext[i] = char((int(ciphertext.at(i)) - key - 65)%26 + 65);
+        } else if (std::islower(ciphertext.at(i)))  {
+            ciphertext[i] = char(int(ciphertext.at(i) - key - 97)%26 + 97);
+        }
     } 
     return ciphertext; 
 }

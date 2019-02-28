@@ -10,9 +10,7 @@
 
 class CaesarCrypt {
     private:
-        size_t key;
-        std::vector<char> alphabet =  {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',  
-                                      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'}; 
+        int key;
     public:
         CaesarCrypt(int); 
         std::string encrypt(std::string plaintext);

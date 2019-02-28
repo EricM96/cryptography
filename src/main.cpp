@@ -1,8 +1,8 @@
 #include "caesar/caesar.h" 
 
 int main() {
-    CaesarCrypt crypt = CaesarCrypt(5); 
-    std::string plaintext = "ZEBRA"; 
+    CaesarCrypt crypt = CaesarCrypt(1); 
+    std::string plaintext = "zebra"; 
     std::cout << "Plaintext is: " << plaintext << std::endl; 
     std::string ciphertext = crypt.encrypt(plaintext); 
     std::cout << "Ciphertext is: " << ciphertext << std::endl; 
