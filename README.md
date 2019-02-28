@@ -5,4 +5,4 @@ implementations of various cryptosystems
 * None yet :man_shrugging: 
 
 ## In Progress
-* Caesar Cipher (just as a warmup) 
+* Caesar Cipher (just as a warmup)
