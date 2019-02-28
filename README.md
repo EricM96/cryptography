@@ -2,7 +2,8 @@
 implementations of various cryptosystems 
 
 ## Available Cryptosystems
-* None yet :man_shrugging: 
+* Caesar Cipher 
 
 ## In Progress
-* Caesar Cipher (just as a warmup) 
+* Simon
+* Speck 
