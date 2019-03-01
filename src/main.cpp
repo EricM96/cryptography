@@ -1,4 +1,4 @@
-#include "caesar/caesar.h" 
+#include "../include/caesar.h" 
 
 int main() {
     CaesarCrypt crypt = CaesarCrypt(5); 

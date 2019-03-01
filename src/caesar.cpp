@@ -1,4 +1,4 @@
-#include "caesar.h"
+#include "../include/caesar.h"
 
 // CaesarCrypt constructor
 CaesarCrypt::CaesarCrypt(int u_key) : key(u_key) {}; 

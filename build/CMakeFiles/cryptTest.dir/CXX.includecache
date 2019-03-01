@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/eam96/Desktop/cryptography/include/caesar.h
+iostream
+-
+string
+-
+vector
+-
+algorithm
+-
+
+C:/Users/eam96/Desktop/cryptography/src/caesar.cpp
+../include/caesar.h
+C:/Users/eam96/Desktop/cryptography/include/caesar.h
+
+C:/Users/eam96/Desktop/cryptography/src/main.cpp
+../include/caesar.h
+C:/Users/eam96/Desktop/cryptography/include/caesar.h
+
